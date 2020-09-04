@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawsome - icons--- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <!------ google-fonts -------- -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-virus"></i>Covid-tracker</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline ml-5 my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Symptoms</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main-body -->
+    <main>
+      <div class="row main-container">
+        <div class="col-md-9 col-sm-12" id="col-one">
+          <div class="row card-container">
+            <div class="card">
+              Total Death
+              <h5>34,421</h5>
+            </div>
+            <div class="card">
+              Active Cases
+              <h5>540,421</h5>
+            </div>
+            <div class="card">
+              Recovered
+              <h5>124,421</h5>
+            </div>
+            <div class="card">
+              Total Cases
+              <h5>788,421</h5>
+            </div>
+          </div>
+
+          <div class="row d-flex centeral-container my-3">
+            <div class="col-sm-7">
+              <div class="row col-sm-12 p-3">
+                <h4>Affected Areas</h4>
+              </div>
+              <div class="chart"></div>
+            </div>
+            <div class="col-sm-5">
+              <div class="row col-sm-12 p-3">
+                <h4>Top Countries</h4>
+              </div>
+              <div class="top-countries d-flex">
+                <!-- <div class="card-top">
+                  Lorem hhhhhhhhhhhhhhhhhhhhhh njnjnjnjnjn jnj hhhhhhhhhhhipsum
+                  dolor sit amet.
+                </div>
+                <div class="card-top">
+                  Lorem ggggggggggggggggggggggggggggg gggggggggipsum dolor sit
+                  amet.
+                </div>
+                <div class="card-top">
+                  Lorvvvvvvvvvvvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvvem ipsum dolor
+                  sit amet.
+                </div> -->
+                <div class="card-top">
+                  <div class="circle circle-one">26%</div>
+                  <div>
+                    <h6>China</h6>
+                    <p>
+                      Affected -<span>890</span> &nbsp; Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="card-top">
+                  <div class="circle circle-two">26%</div>
+                  <div>
+                    <h6>Italy</h6>
+                    <p>
+                      Affected -<span>890</span> &nbsp;Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="card-top">
+                  <div class="circle circle-three">26%</div>
+                  <div>
+                    <h6>USA</h6>
+                    <p>
+                      Affected -<span>890</span>&nbsp; Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row news-symptoms-container">
+            <div class="col news d-block">
+              <div class="btn btn-news">News</div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              eaque incidunt repellat iusto, dolor inventore eveniet mollitia
+              beatae magni facere!
+            </div>
+            <div class="col symptoms">
+              <div class="btn btn-symptoms d-block">Update</div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              suscipit blanditiis odio nihil, nobis facilis quod corporis
+              consequatur ex laboriosam.
+            </div>
+          </div>
+        </div>
+        <div class="col" id="col-two">
+          <div class="row ratio-recovery">
+            <h5>Ratio of recovery</h5>
+            <div class="circle-recovery">26%</div>
+            <p>Affected -<span>890</span> &nbsp; Recovered-<span>234</span></p>
+          </div>
+          <div class="row live-country d-block">
+            <h5 class="">Live Reports</h5>
+            <ul>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">China <span>12.23</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
