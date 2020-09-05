@@ -28,8 +28,8 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">
-        <i class="fas fa-virus"></i>Covid-tracker</a
+      <a class="navbar-brand mr-5" href="#">
+        <i class="fas fa-virus"></i>Covid-Tracker</a
       >
       <button
         class="navbar-toggler"
@@ -44,21 +44,21 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline ml-5 my-2 my-lg-0">
+        <form class="form-inline ml-5 my-2 my-md-0">
           <input
-            class="form-control mr-sm-2"
+            class="form-control px-5"
             type="search"
-            placeholder="Search"
+            placeholder="Country"
             aria-label="Search"
           />
-          <button class="btn my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn-search my-2 my-sm-0" type="submit">Search</button>
         </form>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+          <li class="nav-item mx-3">
             <a class="nav-link" href="#">News</a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item mx-3">
             <a class="nav-link" href="#">Symptoms</a>
           </li>
         </ul>
@@ -70,34 +70,37 @@
       <div class="row main-container">
         <div class="col-md-9 col-sm-12" id="col-one">
           <div class="row card-container">
-            <div class="card">
-              Total Death
+            <div class="card d-flex">
+              <span>Total Death<i class="fas fa-caret-down"></i></span>
               <h5>34,421</h5>
             </div>
             <div class="card">
-              Active Cases
+              <span>Active Cases<i class="fas fa-caret-down"></i></span>
               <h5>540,421</h5>
             </div>
             <div class="card">
-              Recovered
+              <span>Recovered<i class="fas fa-caret-up"></i></span>
               <h5>124,421</h5>
             </div>
             <div class="card">
-              Total Cases
+              <span>Total Cases<i class="fas fa-caret-down"></i></span>
               <h5>788,421</h5>
             </div>
           </div>
 
           <div class="row d-flex centeral-container my-3">
             <div class="col-sm-7">
-              <div class="row col-sm-12 p-3">
-                <h4>Affected Areas</h4>
+              <div class="row col-sm-12 p-1">
+                <h5>Affected Areas</h5>
               </div>
-              <div class="chart"></div>
+              <div class="chart">
+                <!-- <div id="curve_chart" style="width: 490px; height: 244px"></div> -->
+                <div id="curve_chart"></div>
+              </div>
             </div>
             <div class="col-sm-5">
-              <div class="row col-sm-12 p-3">
-                <h4>Top Countries</h4>
+              <div class="row col-sm-12 p-1">
+                <h5>Top Countries</h5>
               </div>
               <div class="top-countries d-flex">
                 <!-- <div class="card-top">
@@ -149,21 +152,26 @@
             </div>
           </div>
           <div class="row news-symptoms-container">
-            <div class="col news d-block">
+            <div class="col news">
               <div class="btn btn-news">News</div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               eaque incidunt repellat iusto, dolor inventore eveniet mollitia
               beatae magni facere!
             </div>
             <div class="col symptoms">
-              <div class="btn btn-symptoms d-block">Update</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              suscipit blanditiis odio nihil, nobis facilis quod corporis
-              consequatur ex laboriosam.
+              <div class="btn btn-symptoms">Symptoms</div>
+              <a href="https://www.freepik.com/vectors/health"
+                ><img
+                  src="./assets/img/cough.jpg"
+                  style="color: red; height: 170px"
+              /></a>
+              <a href="https://www.freepik.com/vectors/health"
+                ><img src="./assets/img/cold.jpg" style="height: 170px"
+              /></a>
             </div>
           </div>
         </div>
-        <div class="col" id="col-two">
+        <div class="col sidebar" id="col-two">
           <div class="row ratio-recovery">
             <h5>Ratio of recovery</h5>
             <div class="circle-recovery">26%</div>
@@ -172,19 +180,53 @@
           <div class="row live-country d-block">
             <h5 class="">Live Reports</h5>
             <ul>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
-              <li class="p-2">China <span>12.23</span></li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/be/shiny/32.png"
+                />China
+                <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/br/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/be/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/ad/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/ae/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/af/flat/32.png"
+                />China <span>12.23</span>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </main>
 
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

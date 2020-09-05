@@ -2,9 +2,13 @@
   --gray-light: #f5f3f4;
   --gray-medium: #a5adb1;
   --gray-dark: #42414a;
-  --red-light: #f0a1a1;
+  --red-light: rgb(255, 221, 221);
+  --red-medium: #f0a1a1;
   --red-dark: #f43331;
-  --green-light: #7e9681;
+  --green-light: rgb(195, 245, 218);
+  --green-medium: #7e9681;
+  --green-dark: #1c6d26;
+  --green: rgb(10, 194, 93);
 }
 li {
   list-style: none;
@@ -22,9 +26,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--gray-light);
-  /* background-color: rgb(248, 200, 200); */
   font-family: "Raleway";
-  font-size: 16px;
+  font-size: 15px;
 }
 .navbar {
   margin: 1rem;
@@ -33,24 +36,54 @@ body {
 
   box-shadow: 0px 0px 13px 5px rgb(238, 238, 238);
 }
-i {
+.navbar-brand {
+  font-weight: 500;
+  /* color: rgb(74, 204, 150); */
+}
+.collapse {
+  text-align: right;
+  left: 0;
+  align-items: right;
+  margin-left: 15%;
+  font-size: 0.8rem;
+}
+.form-control {
+  border-radius: 0.4rem;
+  width: 15rem;
+  font-size: 0.7rem;
+}
+.btn-search,
+.btn-search:focus {
+  background-color: rgb(195, 247, 231);
+  border-radius: 0.44rem;
+  border: none;
+  padding: 0.3rem 1rem;
+  margin: 0.3rem 1rem;
+  font-weight: 500;
+  color: rgb(0, 128, 75);
+  outline: none;
+}
+.btn-search:hover {
+  background-color: rgb(161, 233, 211);
+  border: 1px solid var(--green-light);
+}
+.fa-virus {
   padding-right: 1rem;
-  color: red;
+
   font-size: 2rem;
+
+  border-radius: 0.3rem;
+  color: rgb(219, 12, 12);
 }
 .main-container {
   height: 100vh;
   margin: 0 2rem;
-  /* background-color: rgb(250, 198, 241); */
 }
 #col-one {
-  /* background-color: rgb(209, 101, 101); */
   border-radius: 0.3rem;
-  /* margin: 1rem; */
   width: 100%;
 }
 #col-two {
-  /* background-color: rgb(206, 146, 146); */
   border-radius: 0.3rem;
   margin-left: 1rem;
 }
@@ -62,13 +95,16 @@ i {
   height: 15vh;
 }
 .card {
-  /* background-color: rgb(202, 240, 241); */
   width: 23.5%;
   border-radius: 0.3rem;
   padding: 0.5rem;
   border: none;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
 }
+.card h5 {
+  display: flex;
+}
+
 .centeral-container {
   background-color: rgb(255, 255, 255);
   min-height: 50vh;
@@ -80,10 +116,28 @@ i {
 }
 
 .chart {
-  background-color: #fff;
+  /* background-color: rgb(189, 50, 50); */
   width: 100%;
-
+  margin-bottom: 0rem;
   border-radius: 0.3rem;
+  margin-right: 0.8rem;
+}
+#curve_chart {
+  /* box-shadow: 0px 0px 13px 2px rgb(247, 247, 247); */
+
+  border: 1px solid var(--gray-light);
+  /* clip-path: polygon(25% 33%, 53% 29%, 49% 70%, 21% 70%); */
+  /* clip-path: polygon(47% 34%, 84% 35%, 84% 70%, 48% 70%); */
+}
+.fa-caret-down {
+  margin-left: 0.9rem;
+  font-size: 1.1rem;
+  color: var(--green);
+}
+.fa-caret-up {
+  margin-left: 0.9rem;
+  font-size: 1.1rem;
+  color: var(--red-dark);
 }
 .top-countries {
   border-radius: 0.3rem;
@@ -97,13 +151,10 @@ i {
   height: 100%;
   margin-bottom: 1rem;
   padding: 0.3rem 1rem;
-  /* margin-right: 0; */
   border: 1px solid var(--gray-light);
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
-  /* font-family: "lato"; */
-  /* box-shadow: 0px 0px 13px 5px rgb(233, 233, 233); */
 }
 .card-top:last-child {
   margin: 0;
@@ -147,7 +198,6 @@ i {
 }
 .card-top p {
   font-size: 0.8rem;
-
   color: var(--gray-dark);
 }
 
@@ -156,13 +206,24 @@ i {
   margin-right: 0.5rem;
   border-radius: 0.3rem;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
- 
+  padding: 1rem;
   text-align: right;
+}
+.btn {
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 .btn-news {
   display: block;
-  background-color: rgb(194, 241, 216);
-  width: 23%;
+  background-color: var(--green-light);
+  color: var(--green-dark);
+  width: 28%;
+}
+.btn-symptoms {
+  display: block;
+  background-color: var(--red-light);
+  color: var(--red-dark);
+  width: 28%;
 }
 .symptoms {
   background-color: #fff;
@@ -194,18 +255,18 @@ i {
   font-size: 1rem;
   font-weight: bold;
   color: rgb(9, 168, 115);
-  height: 8rem;
-  width: 8rem;
+  height: 9rem;
+  width: 9rem;
   border-radius: 50%;
   border: 1px solid var(--gray-light);
-  padding: 3.1rem;
+  padding: 3.6rem;
   margin: 3rem 3rem;
 
   background: rgb(251, 251, 251);
   background: radial-gradient(
     circle,
     rgba(251, 251, 251, 1) 35%,
-    rgba(212, 240, 209, 0.84404184036896) 35%,
+    rgba(209, 240, 226, 0.844) 35%,
     rgba(251, 251, 251, 1) 84%
   );
   line-height: 1.8rem;
